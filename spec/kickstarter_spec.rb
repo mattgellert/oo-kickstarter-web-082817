@@ -39,11 +39,11 @@ describe 'Project - #add_backer' do
   end
 end
 
-describe 'Backer - More Advanced #back_project' do
+describe 'Backer - More Advanced #back_project_advanced' do
   it 'also adds the backer to the project\'s backers array' do
     logan = Backer.new("Logan")
     hoverboard = Project.new("Awesome Hoverboard")
-    logan.back_project(hoverboard)
+    logan.back_project_advanced(hoverboard)
 
     # If by this point, the project knows about a new backer, where does that mean
     # some more magic needs to happen? There's really only one place it can happen.
@@ -51,11 +51,11 @@ describe 'Backer - More Advanced #back_project' do
   end
 end
 
-describe 'Project - More Advanced #add_backer' do
+describe 'Project - More Advanced #add_backer_advanced' do
   it 'also adds the project to the backer\'s backed_projects array' do
     ropes = Project.new("All The Ropes")
     arel = Backer.new("Arel")
-    ropes.add_backer(arel)
+    ropes.add_backer_advanced(arel)
 
     # Same thing here. There's only one place we can tell arel about his newly
     # backed project. Where does that need to happen?
